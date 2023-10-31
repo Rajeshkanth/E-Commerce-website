@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/rajeshkanth.github.io/E-Commerce-website/static/css/main.20d8a32f.css",
+    "main.js": "/rajeshkanth.github.io/E-Commerce-website/static/js/main.2ef9847e.js",
+    "index.html": "/rajeshkanth.github.io/E-Commerce-website/index.html",
+    "main.20d8a32f.css.map": "/rajeshkanth.github.io/E-Commerce-website/static/css/main.20d8a32f.css.map",
+    "main.2ef9847e.js.map": "/rajeshkanth.github.io/E-Commerce-website/static/js/main.2ef9847e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.20d8a32f.css",
+    "static/js/main.2ef9847e.js"
+  ]
+}
