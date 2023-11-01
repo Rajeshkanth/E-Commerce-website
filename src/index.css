@@ -79,14 +79,14 @@ code {
 
 .top-right:nth-child(4) {
   margin-right: 3rem;
-  margin-left: -14px;
+  margin-left: -13px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   background-color: buttonface;
 }
 
 .top-right:nth-child(4):hover {
-  background-color: var(--bg-green);
+  background-color: #04be7a;
   color: var(--white);
 }
 
@@ -175,7 +175,15 @@ code {
   background-color: var(--bg-green);
   position: relative;
   top: -2.9rem;
-  left: 12.5rem;
+  left: 12.6rem;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.home button:hover {
+  background-color: #068e5e;
 }
 
 .home a {
@@ -644,4 +652,11 @@ button:hover {
   color: var(--bg-color-1);
   margin-right: 2rem;
   text-align: center;
+}
+
+.search-icon {
+  font-size: 1.4rem;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
 }

@@ -1,4 +1,5 @@
 import React, { memo } from "react";
+import { HiOutlineSearch } from "react-icons/hi";
 
 function Home() {
   return (
@@ -7,7 +8,10 @@ function Home() {
         <h1>Learn to Code</h1>
         <p>With the world's largest web developer site.</p>
         <input type="text" placeholder="search our tutorials, e.g. HTML" />
-        <button></button>
+
+        <button>
+          <HiOutlineSearch className="search-icon" />
+        </button>
         <a href="">Not Sure Where To Begin?</a>
       </section>
     </>
