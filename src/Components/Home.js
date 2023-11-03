@@ -7,11 +7,13 @@ function Home() {
       <section className="home">
         <h1>Learn to Code</h1>
         <p>With the world's largest web developer site.</p>
-        <input type="text" placeholder="search our tutorials, e.g. HTML" />
+        <div>
+          <input type="text" placeholder="search our tutorials, e.g. HTML" />
+          <button>
+            <HiOutlineSearch className="search-icon" />
+          </button>
+        </div>
 
-        <button>
-          <HiOutlineSearch className="search-icon" />
-        </button>
         <a href="">Not Sure Where To Begin?</a>
       </section>
     </>

@@ -1,3 +1,8 @@
+/* html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+} */
+
 body {
   margin: 0;
   width: 100%;
@@ -28,11 +33,11 @@ code {
 }
 
 .navbar {
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 3rem;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 5;
   background-color: var(--white);
@@ -50,13 +55,22 @@ code {
   color: var(--white);
 }
 
-.navbar button:first-child {
-  margin-left: 5rem;
+.menu {
+  display: none;
 }
 
+.image {
+  background-image: url("../public/W3Schools_logo.svg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 4vh;
+  width: 4vw;
+  margin-left: 1rem;
 
+}
 
 .top-right {
+  box-sizing: border-box;
   padding: 8px 16px;
   border-radius: 50px;
   border: none;
@@ -110,11 +124,13 @@ code {
 /* header 2 */
 .header2 {
   height: 35px;
+  width: 100vw;
   background-color: var(--bg-color-1);
-  position: sticky;
+  position: fixed;
   z-index: 2;
-  top: 48px;
+  top: 45px;
   display: flex;
+  overflow-x: auto;
 }
 
 .lang {
@@ -132,12 +148,14 @@ code {
 
 /* section home */
 .home {
+  width: 100%;
   height: 80vh;
   background-color: var(--bg-color-1);
-  padding: 1px;
+  padding: 2px;
   align-items: center;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .home h1 {
@@ -175,11 +193,12 @@ code {
   background-color: var(--bg-green);
   position: relative;
   top: -2.9rem;
-  left: 12.6rem;
+  left: 79%;
   text-align: center;
   align-items: center;
   display: flex;
   justify-content: center;
+  /* box-sizing: border-box; */
 }
 
 .home button:hover {
@@ -202,10 +221,12 @@ code {
 .html {
   background-color: var(--bg-light-green);
   height: 85vh;
+  width: 100%;
   padding: 1px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .html-container {
@@ -280,10 +301,12 @@ code {
 .css {
   background-color: var(--bg-yellow);
   height: 75vh;
+  width: 100%;
   padding: 1px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .css-container {
@@ -312,10 +335,12 @@ code {
 .javascript {
   background-color: var(--bg-color-1);
   height: 55vh;
+  width: 100%;
   padding: 1px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .javascript-container {
@@ -375,10 +400,12 @@ code {
 .python {
   background-color: var(--bg-light-green);
   height: 65vh;
+  width: 100%;
   padding: 1px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .python-container {
@@ -436,10 +463,12 @@ code {
 .sql {
   background-color: var(--bg-turq);
   height: 65vh;
+  width: 100%;
   padding: 1px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .sql-container {
@@ -500,11 +529,15 @@ button:hover {
 
 /* 6 box */
 .php {
+  width: 100%;
   background-color: var(--bg-color-1);
   padding: 16px 0;
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  box-sizing: border-box;
 }
 
 .php .btn {
@@ -512,7 +545,7 @@ button:hover {
 }
 
 .crs-container {
-  width: 38rem;
+  width: 50%;
   height: 15rem;
   display: flex;
   flex-direction: column;
@@ -521,6 +554,7 @@ button:hover {
   margin: 1.5rem;
   border-radius: 15px;
   gap: 1rem;
+  box-sizing: border-box;
 }
 
 
@@ -659,4 +693,263 @@ button:hover {
   color: #fff;
   text-align: center;
   font-weight: 600;
+}
+
+@media all and (max-width:980px) {
+
+  .html,
+  .css,
+  .javascript,
+  .python,
+  .sql {
+    display: block;
+    height: auto;
+  }
+
+  .home,
+  .navbar,
+  .header2,
+  .html,
+  .css,
+  .javascript,
+  .python,
+  .php,
+  .sql {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .php {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .crs-container:nth-child(even) {
+    margin-left: 2rem;
+  }
+
+  .sp {
+    display: none;
+  }
+
+  .sp2 {
+    display: block;
+  }
+
+  .header-right {
+    display: flex;
+  }
+
+  .ex-box-container,
+  .ex-box-container-py,
+  .ex-box-container-sql {
+    padding: 4%;
+    box-sizing: border-box;
+  }
+
+  .example-box {
+    width: 95%;
+  }
+
+
+
+  .example-box-py,
+  .example-box-js,
+  .example-box-sql {
+    width: 95%;
+  }
+
+
+
+}
+
+@media all and (max-width:750px) {
+
+  .active4,
+  .active3 {
+    display: none;
+  }
+}
+
+@media all and (max-width:680px) {
+
+  .image {
+    height: 4vh;
+    width: 6vw;
+  }
+
+  .top-left2 {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    top: 48px;
+    background-color: var(--white);
+  }
+
+  .top-left3 {
+    padding: 15px;
+    border: none;
+    background-color: var(--white);
+    font-size: 1rem;
+
+  }
+
+  .top-left3:hover {
+    background-color: var(--bg-green);
+    color: var(--white);
+  }
+
+  .home {
+    width: 100%;
+    padding-top: 6rem;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home h1 {
+    font-size: 280%;
+    /* line-height: 1.1; */
+    margin-top: -3rem;
+  }
+
+  .home p {
+    font-size: 90%;
+    line-height: 3.2;
+  }
+
+  .home input {
+    width: 20rem;
+  }
+
+  .home button {
+    width: 27%;
+    position: relative;
+    left: 17rem;
+    top: -2.9rem;
+    padding: 3.3%;
+  }
+
+  .top-left {
+    display: none;
+  }
+
+  .header-right {
+    display: flex;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 2rem;
+  }
+
+  .menuBorder {
+    border-bottom: 2px solid var(--bg-green-hover);
+  }
+
+
+
+  .sp {
+    display: none;
+  }
+
+  .sp2 {
+    display: flex;
+  }
+
+  .crs-container {
+    margin: .5rem auto !important;
+  }
+
+}
+
+@media all and (max-width:600px) {
+  .ex-box-container {
+    display: none;
+  }
+
+  .ex-box-container-py {
+    display: none;
+  }
+
+  .ex-box-container-sql {
+    display: none;
+  }
+
+  .html,
+  .css,
+  .javascript,
+  .python,
+  .sql {
+    padding: 4rem 0;
+  }
+
+  .html h1,
+  .css h1,
+  .javascript h1,
+  .python h1,
+  .sql h1 {
+    font-size: 42px;
+  }
+
+  .html p,
+  .css p,
+  .javascript p,
+  .python p,
+  .sql p {
+    font-size: 12px;
+  }
+
+  .html button,
+  .css button,
+  .javascript button,
+  .python button,
+  .sql button {
+    font-size: 10px;
+    width: 38%;
+  }
+
+
+}
+
+@media all and (max-width:500px) {
+  .sp {
+    display: none;
+  }
+
+  .top-right:nth-child(4) {
+    margin-left: 0;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+
+  .home h1 {
+    font-size: 254%;
+  }
+
+  .home p {
+    font-size: 80%;
+  }
+
+  .home input {
+    width: 18rem;
+    font-size: 14px;
+  }
+
+  .home button {
+    width: 27%;
+    position: relative;
+    left: 75%;
+    box-sizing: border-box;
+  }
+
+  .home a {
+    font-size: 80%;
+  }
+
+
 }

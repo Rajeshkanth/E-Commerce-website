@@ -8,7 +8,7 @@ function Php() {
       <section className="php">
         <div
           className=" crs-container"
-          style={isClicked === true ? { width: "38rem" } : { width: "27rem" }}
+          style={isClicked === true ? { width: "90%" } : { width: "27rem" }}
         >
           <h1>PHP</h1>
           <button className=" btn add-btn" onClick={() => AddList("PHP", 150)}>
@@ -23,7 +23,7 @@ function Php() {
         </div>
         <div
           className="jquerry crs-container"
-          style={isClicked === true ? { width: "38rem" } : { width: "27rem" }}
+          style={isClicked === true ? { width: "90%" } : { width: "27rem" }}
         >
           <h1>jquerry</h1>
           <button
@@ -41,7 +41,7 @@ function Php() {
         </div>
         <div
           className="java crs-container"
-          style={isClicked === true ? { width: "38rem" } : { width: "27rem" }}
+          style={isClicked === true ? { width: "90%" } : { width: "27rem" }}
         >
           <h1>java</h1>
           <button className="btn add-btn" onClick={() => AddList("JAVA", 250)}>
@@ -56,7 +56,7 @@ function Php() {
         </div>
         <div
           className="c++ crs-container"
-          style={isClicked === true ? { width: "38rem" } : { width: "27rem" }}
+          style={isClicked === true ? { width: "90%" } : { width: "27rem" }}
         >
           <h1>C++</h1>
           <button className="btn add-btn" onClick={() => AddList("C++", 150)}>
@@ -71,7 +71,7 @@ function Php() {
         </div>
         <div
           className="w3 crs-container"
-          style={isClicked === true ? { width: "38rem" } : { width: "27rem" }}
+          style={isClicked === true ? { width: "90%" } : { width: "27rem" }}
         >
           <h1>w3.css</h1>
           <button className="btn add-btn" onClick={() => AddList("W3.CSS", 50)}>
@@ -86,7 +86,7 @@ function Php() {
         </div>
         <div
           className="bootstrap crs-container"
-          style={isClicked === true ? { width: "38rem" } : { width: "27rem" }}
+          style={isClicked === true ? { width: "90%" } : { width: "27rem" }}
         >
           <h1>Bootstrap</h1>
           <button
