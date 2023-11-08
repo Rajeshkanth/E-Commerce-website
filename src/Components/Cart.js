@@ -1,6 +1,7 @@
 import React, { memo, useContext, useEffect } from "react";
 import Tooltip from "@material-ui/core/Tooltip";
 import { ListContext } from "./Container";
+import { PiShoppingCartLight } from "react-icons/pi";
 
 function Cart() {
   const { list, setList, setTotal, total, RemoveList, closeAll } =
@@ -19,7 +20,9 @@ function Cart() {
       <div id="course">
         <div id="course-container">
           <div id="c-head">
-            <h1 id="course-list">Cart</h1>
+            <h1 id="course-list">
+              <PiShoppingCartLight className="cart-icon" />
+            </h1>
           </div>
           <div id="c-close">
             <Tooltip title="Close">
@@ -45,7 +48,7 @@ function Cart() {
                         id="removeOne"
                         onClick={() => RemoveList(a.Name, a.Price)}
                       >
-                        X
+                        x
                       </span>
                     </Tooltip>
                   </div>

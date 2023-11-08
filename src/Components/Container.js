@@ -80,19 +80,14 @@ function Container() {
         AddList,
         RemoveList,
         closeAll,
-        isClicked
+        isClicked,
       }}
     >
       <div
-        className="container"
-        style={isClicked === true ? Container.block : Container.flex}
+        className={isClicked === true ? "container" : "flex"}
+        // style={isClicked === true ? Container.block : Container.flex}
       >
-        <div
-          className="cont-left"
-          style={
-            isClicked === true ? Container.leftWidth1 : Container.leftWidth2
-          }
-        >
+        <div className={isClicked === true ? "left-width1" : "left-width2"}>
           <Header2 />
           <Home />
           <HTML />
@@ -102,12 +97,7 @@ function Container() {
           <Sql />
           <Php />
         </div>
-        <div
-          className="cont-right"
-          style={
-            isClicked === true ? Container.rightWidth1 : Container.rightWidth2
-          }
-        >
+        <div className={isClicked === true ? "right-width1" : "right-width2"}>
           <Cart />
         </div>
       </div>

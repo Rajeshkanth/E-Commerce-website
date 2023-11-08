@@ -113,7 +113,28 @@ code {
   display: block;
 }
 
+.left-width1 {
+  width: 100%;
+}
 
+.left-width2 {
+  width: 75%;
+}
+
+.right-width1 {
+  width: 0;
+  display: none;
+}
+
+.right-width2 {
+  width: 25%;
+}
+
+.cart-icon {
+  font-size: 28px;
+  text-align: center;
+
+}
 
 
 
@@ -145,6 +166,16 @@ code {
   background-color: var(--black);
   cursor: pointer;
 }
+
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
 
 /* section home */
 .home {
@@ -613,6 +644,8 @@ button:hover {
   padding: 1px;
   position: sticky;
   top: 48px;
+  z-index: 3;
+
 }
 
 #course-container {
@@ -865,6 +898,13 @@ button:hover {
     margin: .5rem auto !important;
   }
 
+  .left-width2 {
+    width: 100%;
+  }
+
+  .php {
+    width: 100%;
+  }
 }
 
 @media all and (max-width:600px) {
@@ -951,5 +991,23 @@ button:hover {
     font-size: 80%;
   }
 
+  .flex {
+    display: block;
+
+  }
+
+  .right-width2 {
+    width: 100%;
+    position: fixed;
+    top: 80px;
+  }
+
+  #course {
+    height: auto;
+  }
+
+  #c-head {
+    text-align: center;
+  }
 
 }
