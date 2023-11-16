@@ -151,7 +151,7 @@ code {
   z-index: 2;
   top: 45px;
   display: flex;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 .lang {
