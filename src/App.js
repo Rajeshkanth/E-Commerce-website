@@ -71,7 +71,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Body />} />
-          <Route path="/payment" element={<PaymentForm />} />
+          <Route path="/payment" element={<PaymentForm total={total} />} />
         </Routes>
       </Router>
     </ListContext.Provider>

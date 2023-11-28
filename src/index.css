@@ -737,6 +737,18 @@ button:hover {
   display: flex;
   justify-content: space-between;
 }
+.paymentContainer {
+  width: 30rem;
+  background-color: #d9eee1;
+  position: fixed;
+  top: 10rem;
+  left: 10rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 0;
+}
 @media all and (max-width: 980px) {
   .html,
   .css,
