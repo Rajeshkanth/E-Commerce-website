@@ -11,8 +11,8 @@ function Payment() {
     navigate("/payment");
   };
 
-  const paymentURl = `https://rajeshkanth.github.io/E-Commerce-website#/payment?total=${totalValue}`;
-
+  const paymentURl = `https://rajeshkanth.github.io/E-Commerce-website/#/payment`;
+  console.log(paymentURl);
   return (
     <>
       <div className="pymntContainer">

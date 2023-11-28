@@ -4,11 +4,12 @@ import { ListContext } from "../App";
 
 function PaymentForm() {
   const { total } = useContext(ListContext);
+  const totalValue = total;
   console.log(total);
   return (
     <>
       <div>
-        <h1>Amount to Pay : {total}</h1>
+        <h1>Amount to Pay : {totalValue}</h1>
       </div>
     </>
   );
