@@ -4,7 +4,7 @@ import { ListContext } from "./Container";
 import { PiShoppingCartLight } from "react-icons/pi";
 
 function Cart() {
-  const { list, setList, setTotal, total, RemoveList, closeAll } =
+  const { list, setList, setTotal, total, RemoveList, closeAll ,buy} =
     useContext(ListContext);
 
   const closeCart = () => {
@@ -58,8 +58,12 @@ function Cart() {
           </div>
         )}
         <div id="total">
+          <div className="totalValue">
           <h3 className="totalName">Total</h3>
           <p className="evals">{total}</p>
+          </div>
+         
+          <button className="btn" onClick={buy}>Buy Now</button>
         </div>
       </div>
     </>

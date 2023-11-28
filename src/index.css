@@ -7,29 +7,29 @@ body {
   margin: 0;
   width: 100%;
   scroll-behavior: smooth;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 :root {
   --white: #fff;
   --black: #000000;
-  --bg-color-1: #282A35;
-  --bg-green: #04AA6D;
+  --bg-color-1: #282a35;
+  --bg-green: #04aa6d;
   --bg-green-hover: #04a46d;
-  --bg-yellow: #FFF4A3;
-  --bg-light-green: #D9EEE1;
-  --bg-grey: #E7E9EB;
+  --bg-yellow: #fff4a3;
+  --bg-light-green: #d9eee1;
+  --bg-grey: #e7e9eb;
   --bg-pink: #ffb3bb;
-  --bg-turq: #96D4D4;
+  --bg-turq: #96d4d4;
 }
 
 .navbar {
@@ -66,7 +66,6 @@ code {
   height: 4vh;
   width: 4vw;
   margin-left: 1rem;
-
 }
 
 .top-right {
@@ -133,10 +132,7 @@ code {
 .cart-icon {
   font-size: 28px;
   text-align: center;
-
 }
-
-
 
 /* .cont-right .newRight {
   width: 25%;
@@ -157,7 +153,7 @@ code {
 .lang {
   height: 100%;
   border: none;
-  background-color: #282A35;
+  background-color: #282a35;
   color: white;
   padding: 8px 16px;
 }
@@ -167,7 +163,6 @@ code {
   cursor: pointer;
 }
 
-
 .block {
   display: block;
 }
@@ -175,7 +170,6 @@ code {
 .flex {
   display: flex;
 }
-
 
 /* section home */
 .home {
@@ -209,7 +203,7 @@ code {
   width: 30rem;
   height: 2.3rem;
   border-radius: 25px;
-  padding: .3rem 1rem;
+  padding: 0.3rem 1rem;
   font-size: 1rem;
   font-weight: 600;
 }
@@ -217,7 +211,7 @@ code {
 .home button {
   width: 7rem;
   height: 2.9rem;
-  padding: .3rem 1rem;
+  padding: 0.3rem 1rem;
   border-radius: 0 25px 25px 0;
   border: none;
   outline: none;
@@ -290,7 +284,7 @@ code {
   font-weight: 600;
   color: var(--white);
   border: none;
-  background-color: #04AA6D;
+  background-color: #04aa6d;
 }
 
 .remove-btn {
@@ -302,8 +296,7 @@ code {
   height: 25rem;
   width: 22rem;
   background-color: var(--bg-grey);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
-    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   padding: 5px 15px;
 }
 
@@ -401,8 +394,7 @@ code {
   height: 20rem;
   width: 22rem;
   background-color: var(--bg-grey);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
-    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   padding: 5px 15px;
 }
 
@@ -464,8 +456,7 @@ code {
   height: 20rem;
   width: 22rem;
   background-color: var(--bg-grey);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
-    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   padding: 5px 15px;
 }
 
@@ -527,8 +518,7 @@ code {
   height: 18rem;
   width: 22rem;
   background-color: var(--bg-grey);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
-    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   padding: 5px 15px;
 }
 
@@ -555,7 +545,6 @@ code {
 
 button:hover {
   cursor: pointer;
-
 }
 
 /* 6 box */
@@ -588,10 +577,8 @@ button:hover {
   box-sizing: border-box;
 }
 
-
-
 .crs-container .btn {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .crs-container h1 {
@@ -640,12 +627,12 @@ button:hover {
 
 #course {
   background-color: var(--bg-light-green);
-  height: 92.8vh;
+  height: 93.8vh;
   padding: 1px;
-  position: sticky;
+  position: fixed;
+  width: 25%;
   top: 48px;
   z-index: 3;
-
 }
 
 #course-container {
@@ -655,12 +642,9 @@ button:hover {
   padding: 0 1.2rem;
 }
 
-
 #course-container h1 {
-  margin: .3rem;
-
+  margin: 0.3rem;
 }
-
 
 .list {
   display: flex;
@@ -680,7 +664,7 @@ button:hover {
 }
 
 #crs-list {
-  height: 76.5%;
+  height: 70.5%;
 }
 
 .li {
@@ -703,17 +687,24 @@ button:hover {
 
 #total {
   border-top: 2px solid var(--black);
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   padding: 0 3rem;
   align-items: center;
+}
+.totalValue {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#total button {
+  width: 100%;
+  margin: 0.6rem auto;
 }
 
 #total h3 {
   margin: 0;
 }
-
-
 
 #removeOne {
   color: var(--bg-color-1);
@@ -728,8 +719,21 @@ button:hover {
   font-weight: 600;
 }
 
-@media all and (max-width:980px) {
+.pymntContainer {
+  position: fixed;
+  top: 10rem;
+  left: 10rem;
+  height: 30rem;
+  width: 40rem;
+  background-color: #282a35;
+  color: #e7e9eb;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 12px;
+}
 
+@media all and (max-width: 980px) {
   .html,
   .css,
   .javascript,
@@ -784,28 +788,21 @@ button:hover {
     width: 95%;
   }
 
-
-
   .example-box-py,
   .example-box-js,
   .example-box-sql {
     width: 95%;
   }
-
-
-
 }
 
-@media all and (max-width:750px) {
-
+@media all and (max-width: 750px) {
   .active4,
   .active3 {
     display: none;
   }
 }
 
-@media all and (max-width:680px) {
-
+@media all and (max-width: 680px) {
   .image {
     height: 4vh;
     width: 6vw;
@@ -826,7 +823,6 @@ button:hover {
     border: none;
     background-color: var(--white);
     font-size: 1rem;
-
   }
 
   .top-left3:hover {
@@ -884,8 +880,6 @@ button:hover {
     border-bottom: 2px solid var(--bg-green-hover);
   }
 
-
-
   .sp {
     display: none;
   }
@@ -895,7 +889,7 @@ button:hover {
   }
 
   .crs-container {
-    margin: .5rem auto !important;
+    margin: 0.5rem auto !important;
   }
 
   .left-width2 {
@@ -907,7 +901,7 @@ button:hover {
   }
 }
 
-@media all and (max-width:600px) {
+@media all and (max-width: 600px) {
   .ex-box-container {
     display: none;
   }
@@ -952,11 +946,9 @@ button:hover {
     font-size: 10px;
     width: 38%;
   }
-
-
 }
 
-@media all and (max-width:500px) {
+@media all and (max-width: 500px) {
   .sp {
     display: none;
   }
@@ -993,7 +985,6 @@ button:hover {
 
   .flex {
     display: block;
-
   }
 
   .right-width2 {
@@ -1009,5 +1000,4 @@ button:hover {
   #c-head {
     text-align: center;
   }
-
 }

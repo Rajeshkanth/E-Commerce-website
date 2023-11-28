@@ -8,12 +8,18 @@ import Python from "./Python";
 import Sql from "./Sql";
 import Php from "./Php";
 import Cart from "./Cart";
+import Payment from "./Payment";
 
 export const ListContext = createContext();
 function Container() {
   const [list, setList] = useState([]);
   const [total, setTotal] = useState(0);
   const [isClicked, setIsClicked] = useState(true);
+  const [isBuy, setIsBuy] = useState(true);
+
+  const buy = () => {
+    setIsBuy(false);
+  };
 
   const Container = {
     block: {
@@ -56,13 +62,15 @@ function Container() {
   };
 
   const RemoveList = (name, price) => {
-    const index = list.findIndex((a) => a.Name === name);
-    if (index !== -1) {
-      list.splice(index, 1);
-      setList(list);
-      setTotal(total - price);
+    const updatedList = list.filter((item) => item.Name !== name);
+    const itemToRemove = list.find((item) => item.Name === name);
+
+    if (itemToRemove) {
+      setList(updatedList);
+      setTotal(total - itemToRemove.Price);
     }
-    if (list.length === 0) {
+
+    if (updatedList.length === 0) {
       closeAll();
     }
   };
@@ -81,6 +89,7 @@ function Container() {
         RemoveList,
         closeAll,
         isClicked,
+        buy,
       }}
     >
       <div
@@ -101,6 +110,7 @@ function Container() {
           <Cart />
         </div>
       </div>
+      {isBuy ? null : <Payment />}
     </ListContext.Provider>
   );
 }
