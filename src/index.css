@@ -733,7 +733,10 @@ button:hover {
   justify-content: space-around;
   border-radius: 12px;
 }
-
+.pymntClose {
+  display: flex;
+  justify-content: space-between;
+}
 @media all and (max-width: 980px) {
   .html,
   .css,
