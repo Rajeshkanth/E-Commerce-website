@@ -1,10 +1,10 @@
 import React, { memo, useContext, useEffect } from "react";
 import Tooltip from "@material-ui/core/Tooltip";
-import { ListContext } from "./Container";
+import { ListContext } from "../App";
 import { PiShoppingCartLight } from "react-icons/pi";
 
 function Cart() {
-  const { list, setList, setTotal, total, RemoveList, closeAll ,buy} =
+  const { list, setList, setTotal, total, RemoveList, closeAll, buy } =
     useContext(ListContext);
 
   const closeCart = () => {
@@ -59,11 +59,13 @@ function Cart() {
         )}
         <div id="total">
           <div className="totalValue">
-          <h3 className="totalName">Total</h3>
-          <p className="evals">{total}</p>
+            <h3 className="totalName">Total</h3>
+            <p className="evals">{total}</p>
           </div>
-         
-          <button className="btn" onClick={buy}>Buy Now</button>
+
+          <button className="btn" onClick={buy}>
+            Buy Now
+          </button>
         </div>
       </div>
     </>

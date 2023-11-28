@@ -722,13 +722,14 @@ button:hover {
 .pymntContainer {
   position: fixed;
   top: 10rem;
-  left: 10rem;
+  left: 5rem;
   height: 30rem;
-  width: 40rem;
+  width: 35rem;
   background-color: #282a35;
   color: #e7e9eb;
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   border-radius: 12px;
 }

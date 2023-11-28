@@ -1,11 +1,13 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import Header from "./Components/Header";
 import Container from "./Components/Container";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import PaymentForm from "./Components/PaymentForm";
 import Body from "./Body";
-import { ListContext } from "./Components/Container";
+// import { ListContext } from "./Components/Container";
+
+export const ListContext = createContext();
 
 function App() {
   const [list, setList] = useState([]);
@@ -40,7 +42,7 @@ function App() {
 
     if (itemToRemove) {
       setList(updatedList);
-      setTotal(total - itemToRemove.Price);
+      setTotal((prevTotal) => prevTotal - itemToRemove.Price);
     }
 
     if (updatedList.length === 0) {
@@ -48,7 +50,9 @@ function App() {
     }
   };
 
-  useEffect(() => {}, [list, total, isClicked]);
+  useEffect(() => {
+    console.log(total);
+  }, [list, total, isClicked]);
   return (
     <ListContext.Provider
       value={{
@@ -61,6 +65,7 @@ function App() {
         closeAll,
         isClicked,
         buy,
+        isBuy,
       }}
     >
       <Router>

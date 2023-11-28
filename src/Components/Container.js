@@ -1,4 +1,10 @@
-import React, { createContext, memo, useEffect, useState } from "react";
+import React, {
+  createContext,
+  memo,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import Header2 from "./Header2";
 import Home from "./Home";
 import HTML from "./HTML";
@@ -9,18 +15,10 @@ import Sql from "./Sql";
 import Php from "./Php";
 import Cart from "./Cart";
 import Payment from "./Payment";
+import { ListContext } from "../App";
 
-export const ListContext = createContext();
 function Container() {
-  const [list, setList] = useState([]);
-  const [total, setTotal] = useState(0);
-  const [isClicked, setIsClicked] = useState(true);
-  const [isBuy, setIsBuy] = useState(true);
-
-  const buy = () => {
-    setIsBuy(false);
-  };
-
+  const { isClicked, isBuy } = useContext(ListContext);
   const Container = {
     block: {
       display: "block",
@@ -43,55 +41,9 @@ function Container() {
     },
   };
 
-  const closeAll = () => {
-    setIsClicked(true);
-  };
-
-  const AddList = (name, price) => {
-    // const itemExist = list.some(
-    //   (items) => items.Name === name && items.Price === price
-    // );
-
-    const index = list.findIndex((a) => a.Name === name);
-    const newList = { Name: name, Price: price };
-    if (index === -1) {
-      setIsClicked(false);
-      setList((a) => [...a, newList]);
-      setTotal(total + price);
-    }
-  };
-
-  const RemoveList = (name, price) => {
-    const updatedList = list.filter((item) => item.Name !== name);
-    const itemToRemove = list.find((item) => item.Name === name);
-
-    if (itemToRemove) {
-      setList(updatedList);
-      setTotal(total - itemToRemove.Price);
-    }
-
-    if (updatedList.length === 0) {
-      closeAll();
-    }
-  };
-
-  useEffect(() => {}, [list, total, isClicked]);
-
-  console.log(list);
+  // console.log(list);
   return (
-    <ListContext.Provider
-      value={{
-        list,
-        setList,
-        total,
-        setTotal,
-        AddList,
-        RemoveList,
-        closeAll,
-        isClicked,
-        buy,
-      }}
-    >
+    <>
       <div
         className={isClicked === true ? "container" : "flex"}
         // style={isClicked === true ? Container.block : Container.flex}
@@ -106,12 +58,14 @@ function Container() {
           <Sql />
           <Php />
         </div>
-        <div className={isClicked === true ? "right-width1" : "right-width2"}>
-          <Cart />
-        </div>
+        {
+          <div className={isClicked === true ? "right-width1" : "right-width2"}>
+            <Cart />
+          </div>
+        }
       </div>
       {isBuy ? null : <Payment />}
-    </ListContext.Provider>
+    </>
   );
 }
 
