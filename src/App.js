@@ -14,9 +14,11 @@ function App() {
   const [total, setTotal] = useState(0);
   const [isClicked, setIsClicked] = useState(true);
   const [isBuy, setIsBuy] = useState(true);
+  const [newTotal, setNewTotal] = useState(0);
 
   const buy = () => {
     setIsBuy(false);
+    setNewTotal(total);
   };
   const closeAll = () => {
     setIsClicked(true);
@@ -52,7 +54,9 @@ function App() {
 
   useEffect(() => {
     console.log(total);
-  }, [list, total, isClicked]);
+    console.log(newTotal);
+    setNewTotal(total);
+  }, [list, total, newTotal, isClicked]);
   return (
     <ListContext.Provider
       value={{
@@ -66,12 +70,13 @@ function App() {
         isClicked,
         buy,
         isBuy,
+        newTotal,
       }}
     >
       <Router>
         <Routes>
           <Route path="/" element={<Body />} />
-          <Route path="/payment" element={<PaymentForm total={total} />} />
+          <Route path="/payment" element={<PaymentForm />} />
         </Routes>
       </Router>
     </ListContext.Provider>

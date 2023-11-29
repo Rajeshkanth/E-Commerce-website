@@ -18,7 +18,7 @@ import Payment from "./Payment";
 import { ListContext } from "../App";
 
 function Container() {
-  const { isClicked, isBuy } = useContext(ListContext);
+  const { isClicked, isBuy, total } = useContext(ListContext);
   const Container = {
     block: {
       display: "block",
@@ -64,7 +64,7 @@ function Container() {
           </div>
         }
       </div>
-      {isBuy ? null : <Payment />}
+      {isBuy ? null : <Payment totalValue={total} />}
     </>
   );
 }

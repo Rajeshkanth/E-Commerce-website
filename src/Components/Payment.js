@@ -1,19 +1,16 @@
-import React, { useContext } from "react";
+import React from "react";
 import QRCode from "react-qr-code";
 import { useNavigate } from "react-router-dom";
-import { ListContext } from "../App";
 
-function Payment({ total }) {
+function Payment({ totalValue }) {
   const navigate = useNavigate();
-  //   const { total } = useContext(ListContext);
-  const totalValue = total;
+
   const handlePaymentClick = () => {
-    navigate("/payment");
+    navigate(`/payment?total=${totalValue}`);
   };
 
-  const paymentURL = `https://rajeshkanth.github.io/E-Commerce-website#/payment`;
+  const paymentURL = `https://rajeshkanth.github.io/E-Commerce-website/#/payment?total=${totalValue}`;
 
-  console.log(paymentURL);
   return (
     <>
       <div className="pymntContainer">
