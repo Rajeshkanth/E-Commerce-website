@@ -1,7 +1,5 @@
 import "./App.css";
 import React, { createContext, useEffect, useState } from "react";
-import Header from "./Components/Header";
-import Container from "./Components/Container";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import PaymentForm from "./Components/PaymentForm";
 import Body from "./Body";
@@ -15,10 +13,14 @@ function App() {
   const [isClicked, setIsClicked] = useState(true);
   const [isBuy, setIsBuy] = useState(true);
   const [newTotal, setNewTotal] = useState(0);
+  // const navigate = useNavigate();
 
   const buy = () => {
     setIsBuy(false);
     setNewTotal(total);
+  };
+  const cancel = () => {
+    setIsBuy(true);
   };
   const closeAll = () => {
     setIsClicked(true);
@@ -56,7 +58,7 @@ function App() {
     console.log(total);
     console.log(newTotal);
     setNewTotal(total);
-  }, [list, total, newTotal, isClicked]);
+  }, [list, total, newTotal, isBuy, isClicked]);
   return (
     <ListContext.Provider
       value={{
@@ -70,6 +72,7 @@ function App() {
         isClicked,
         buy,
         isBuy,
+        setIsBuy,
         newTotal,
       }}
     >

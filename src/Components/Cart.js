@@ -2,19 +2,10 @@ import React, { memo, useContext, useEffect } from "react";
 import Tooltip from "@material-ui/core/Tooltip";
 import { ListContext } from "../App";
 import { PiShoppingCartLight } from "react-icons/pi";
-import PaymentForm from "./PaymentForm";
 
 function Cart() {
-  const {
-    list,
-    setList,
-    setTotal,
-    total,
-    RemoveList,
-    closeAll,
-    buy,
-    newTotal,
-  } = useContext(ListContext);
+  const { list, setList, setTotal, total, RemoveList, closeAll, buy } =
+    useContext(ListContext);
 
   const closeCart = () => {
     setList([]);

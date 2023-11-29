@@ -18,9 +18,12 @@ function Payment({ totalValue }) {
           <h1>Scan here to Pay</h1>
           <h1>x</h1>
         </div>
-
-        <QRCode value={paymentURL} />
-        <button onClick={handlePaymentClick}>Go to Payment</button>
+        <div className="qr">
+          <QRCode className="qrcode" value={paymentURL} />
+          <button onClick={handlePaymentClick} className="btn">
+            Go to Payment
+          </button>
+        </div>
       </div>
     </>
   );

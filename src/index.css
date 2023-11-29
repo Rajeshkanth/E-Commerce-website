@@ -719,23 +719,38 @@ button:hover {
   font-weight: 600;
 }
 
+.pymntClose {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* flex-direction: ; */
+}
 .pymntContainer {
   position: fixed;
   top: 10rem;
-  left: 5rem;
-  height: 30rem;
-  width: 35rem;
+  left: 10rem;
+  height: 60vh;
+  width: 45vw;
   background-color: #282a35;
   color: #e7e9eb;
-  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   border-radius: 12px;
+  box-sizing: border-box;
 }
-.pymntClose {
+.pymntContainer button {
+  margin: 2rem 0;
+  width: 20vw;
+}
+.qr {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.qrcode {
+  width: 30vw;
 }
 .paymentContainer {
   width: 30rem;
@@ -1011,9 +1026,34 @@ button:hover {
 
   #course {
     height: auto;
+    width: 100%;
+    position: absolute;
+    top: 0;
   }
 
   #c-head {
     text-align: center;
+  }
+  .pymntContainer {
+    width: 70vw;
+    position: fixed;
+    left: 15vw;
+  }
+  .qrcode {
+    width: 40vw;
+  }
+  .pymntContainer .btn {
+    width: 40vw;
+  }
+  .paymentContainer {
+    width: 70vw;
+    left: 15vw;
+    border-radius: 20px;
+  }
+  .paymentContainer .btn {
+    width: 30vw;
+  }
+  .paymentContainer .btn:nth-of-type(2) {
+    background-color: #f77c88;
   }
 }
