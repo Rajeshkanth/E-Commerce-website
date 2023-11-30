@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/E-Commerce-website/static/css/main.0e89ec4a.css",
-    "main.js": "/E-Commerce-website/static/js/main.3c9f7122.js",
+    "main.css": "/E-Commerce-website/static/css/main.154833fd.css",
+    "main.js": "/E-Commerce-website/static/js/main.2ceb9bb6.js",
     "static/media/W3Schools_logo.svg.png": "/E-Commerce-website/static/media/W3Schools_logo.svg.20a87da62f0177c2f56e.png",
     "index.html": "/E-Commerce-website/index.html",
-    "main.0e89ec4a.css.map": "/E-Commerce-website/static/css/main.0e89ec4a.css.map",
-    "main.3c9f7122.js.map": "/E-Commerce-website/static/js/main.3c9f7122.js.map"
+    "main.154833fd.css.map": "/E-Commerce-website/static/css/main.154833fd.css.map",
+    "main.2ceb9bb6.js.map": "/E-Commerce-website/static/js/main.2ceb9bb6.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e89ec4a.css",
-    "static/js/main.3c9f7122.js"
+    "static/css/main.154833fd.css",
+    "static/js/main.2ceb9bb6.js"
   ]
 }
