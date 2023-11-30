@@ -63,9 +63,6 @@ function SignIn() {
             <div className="fp">
               <h6>Mail/Password do not matched</h6>{" "}
               <span>forgot password ?</span>
-              <h6>
-                don't have an account... <span onClick={signUp}> Sign Up</span>
-              </h6>
             </div>
           ) : null}
           {msg2 ? (
@@ -76,6 +73,9 @@ function SignIn() {
           <button className="btn" onClick={login}>
             Sign in
           </button>
+          <h6>
+            don't have an account... <span onClick={signUp}> Sign Up</span>
+          </h6>
         </div>
       </div>
     </>

@@ -834,12 +834,12 @@ h3 {
   padding: 12vw;
   border-radius: 10px;
 }
-.signupCont input,
-label {
+.signupCont input {
   margin: 0.4rem 0;
   border-radius: 5px;
   border: 0;
-  padding: 0.4rem 0;
+  padding: 0.8rem 1rem;
+  box-sizing: border-box;
 }
 .signupCont button {
   margin: 1rem auto;
