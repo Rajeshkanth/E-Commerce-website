@@ -1,7 +1,7 @@
 function Order() {
   return (
     <>
-      <div>
+      <div className="order">
         <h1>Order Placed Successfully...!</h1>
       </div>
     </>

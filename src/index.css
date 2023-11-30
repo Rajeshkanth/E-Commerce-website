@@ -844,6 +844,16 @@ h3 {
 .signupCont button {
   margin: 1rem auto;
 }
+.order {
+  position: fixed;
+  top: 20vh;
+  left: 15vw;
+  background-color: #f77c88;
+  width: 70vw;
+  font-size: 4vw;
+  padding: 2rem;
+  box-sizing: border-box;
+}
 @media all and (max-width: 980px) {
   .html,
   .css,
