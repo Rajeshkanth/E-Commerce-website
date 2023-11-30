@@ -753,16 +753,89 @@ button:hover {
   width: 30vw;
 }
 .paymentContainer {
-  width: 30rem;
+  width: 60rem;
+  height: 70vh;
   background-color: #d9eee1;
   position: fixed;
-  top: 10rem;
+  top: 2rem;
   left: 10rem;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 3rem 0;
+}
+.pymntAlert {
+  height: 60vh;
+  width: 70vw;
+  background-color: #ffb3bb;
+  z-index: 3;
+  position: absolute;
+  top: 20vh;
+  left: 15vw;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.pymntAlert h3 {
+  font-size: 3vw;
+}
+span {
+  color: blue;
+}
+.signInCont {
+  background-color: #04be7a;
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  margin: 4rem auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+.signInCont input {
+  width: 45vw;
+  margin: 0.4rem auto;
+  outline: none;
+  font-size: 14px;
+  border-radius: 3px;
+  border: 0;
+  padding: 1vw;
+}
+.signInCont label {
+  margin: 0.2rem 1.5rem;
+}
+.signInCont button {
+  width: 30vw;
+  background-color: #f77c88;
+  margin: 1rem auto;
+}
+.fp {
+  font-size: 14px;
+  margin-left: 1.5rem;
+}
+.signupCont {
+  width: 60vw;
+  background-color: #d9eee1;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  padding: 12vw;
+  border-radius: 10px;
+}
+.signupCont input,
+label {
+  margin: 0.4rem 0;
+  border-radius: 5px;
+  border: 0;
+  padding: 0.4rem 0;
+}
+.signupCont button {
+  margin: 1rem auto;
 }
 @media all and (max-width: 980px) {
   .html,
@@ -977,6 +1050,25 @@ button:hover {
     font-size: 10px;
     width: 38%;
   }
+  .paymentContainer {
+    width: 70vw;
+    left: 15vw;
+    border-radius: 20px;
+  }
+  .paymentContainer h1 {
+    font-size: 5vw;
+  }
+  .paymentContainer .btn {
+    width: 30vw;
+  }
+  .paymentContainer .btn:nth-of-type(2) {
+    background-color: #f77c88;
+  }
+  #course button {
+    width: 50vw;
+    position: relative;
+    left: 10vw;
+  }
 }
 
 @media all and (max-width: 500px) {
@@ -1044,16 +1136,5 @@ button:hover {
   }
   .pymntContainer .btn {
     width: 40vw;
-  }
-  .paymentContainer {
-    width: 70vw;
-    left: 15vw;
-    border-radius: 20px;
-  }
-  .paymentContainer .btn {
-    width: 30vw;
-  }
-  .paymentContainer .btn:nth-of-type(2) {
-    background-color: #f77c88;
   }
 }

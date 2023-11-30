@@ -3,6 +3,9 @@ import React, { createContext, useEffect, useState } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import PaymentForm from "./Components/PaymentForm";
 import Body from "./Body";
+import SignIn from "./SignIn";
+import SignUp from "./SignUp";
+import Order from "./Components/Order";
 // import { ListContext } from "./Components/Container";
 
 export const ListContext = createContext();
@@ -13,15 +16,19 @@ function App() {
   const [isClicked, setIsClicked] = useState(true);
   const [isBuy, setIsBuy] = useState(true);
   const [newTotal, setNewTotal] = useState(0);
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [mail, setMail] = useState("");
+  const [createPswd, setCreatePswd] = useState("");
+  const [confirmPswd, setConfirmPswd] = useState("");
+  const [user, setUser] = useState([]);
   // const navigate = useNavigate();
 
   const buy = () => {
     setIsBuy(false);
     setNewTotal(total);
   };
-  const cancel = () => {
-    setIsBuy(true);
-  };
+
   const closeAll = () => {
     setIsClicked(true);
   };
@@ -74,12 +81,27 @@ function App() {
         isBuy,
         setIsBuy,
         newTotal,
+        name,
+        setName,
+        setPassword,
+        password,
+        mail,
+        setMail,
+        createPswd,
+        setCreatePswd,
+        confirmPswd,
+        setConfirmPswd,
+        user,
+        setUser,
       }}
     >
       <Router>
         <Routes>
           <Route path="/" element={<Body />} />
           <Route path="/payment" element={<PaymentForm />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/order" element={<Order />} />
         </Routes>
       </Router>
     </ListContext.Provider>
