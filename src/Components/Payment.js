@@ -15,7 +15,7 @@ function Payment({ totalValue }) {
     <>
       <div className="pymntContainer">
         <div className="pymntClose">
-          <h1>Scan here to Pay</h1>
+          <h1>Scan here to Order</h1>
           <h1>x</h1>
         </div>
         <div className="qr">

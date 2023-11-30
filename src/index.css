@@ -786,6 +786,8 @@ button:hover {
 }
 span {
   color: blue;
+  font-size: 14px;
+  margin-top: 0.4rem;
 }
 .signInCont {
   background-color: #04be7a;
@@ -796,6 +798,10 @@ span {
   padding: 2rem;
   box-sizing: border-box;
   border-radius: 15px;
+}
+.signInCont h6,
+h3 {
+  margin: 0 auto;
 }
 .signInCont input {
   width: 45vw;
@@ -817,6 +823,7 @@ span {
 .fp {
   font-size: 14px;
   margin-left: 1.5rem;
+  margin-top: 1rem;
 }
 .signupCont {
   width: 60vw;

@@ -4,6 +4,8 @@ import { ListContext } from "./App";
 
 function SignIn() {
   const navigate = useNavigate();
+  const [msg, setMsg] = useState(false);
+  const [msg2, setMsg2] = useState(false);
 
   const { name, setName, password, setPassword, user } =
     useContext(ListContext);
@@ -17,16 +19,22 @@ function SignIn() {
     navigate("/signup");
   };
   const login = () => {
-    for (let i = 0; i < user.length; i++) {
-      if (
-        user[i].Mail == name &&
-        parseInt(user[i].ConfirmPswd) == parseInt(password)
-      ) {
-        console.log("hello");
+    if (name && password) {
+      setMsg2(false);
+      let userFound = false;
+      for (let i = 0; i < user.length; i++) {
+        if (user[i].Mail === name && user[i].ConfirmPswd === password) {
+          userFound = true;
+          break;
+        }
+      }
+      if (userFound) {
         navigate("/order");
       } else {
-        console.log("not");
+        setMsg(true);
       }
+    } else {
+      setMsg2(true);
     }
   };
   return (
@@ -34,8 +42,9 @@ function SignIn() {
       <div>
         <div className="signInCont">
           <h3>
-            <span>Sign in</span> to order...{" "}
+            <span>Sign in to order...</span>
           </h3>
+
           <label htmlFor="user">Enter Your Mail </label>
           <input type="mail" name="user" value={name} onChange={handleName} />
           <label htmlFor="pswd">Enter Your Password</label>
@@ -45,13 +54,23 @@ function SignIn() {
             value={password}
             onChange={handlePassword}
           />
+          {msg ? (
+            <div className="fp">
+              <h6>Mail/Password do not matched</h6>{" "}
+              <span>forgot password ?</span>
+              <h6>
+                don't have an account... <span onClick={signUp}> Sign Up</span>
+              </h6>
+            </div>
+          ) : null}
+          {msg2 ? (
+            <div className="fp ">
+              <h6>Enter Valid Mail/Password!</h6>
+            </div>
+          ) : null}
           <button className="btn" onClick={login}>
-            Log in
+            Sign in
           </button>
-          <span className="fp">forgot password ?</span>
-          <h3>
-            don't have an account... <span onClick={signUp}> Sign Up</span>
-          </h3>
         </div>
       </div>
     </>

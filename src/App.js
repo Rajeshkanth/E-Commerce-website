@@ -100,7 +100,7 @@ function App() {
           <Route path="/" element={<Body />} />
           <Route path="/payment" element={<PaymentForm />} />
           <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signup" element={<SignUp totalValue={total} />} />
           <Route path="/order" element={<Order />} />
         </Routes>
       </Router>

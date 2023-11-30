@@ -1,8 +1,9 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ListContext } from "./App";
 
-function SignUp() {
+function SignUp({ totalValue }) {
+  const [msg, setMsg] = useState(false);
   const navigate = useNavigate();
   const {
     user,
@@ -25,7 +26,8 @@ function SignUp() {
   const handleConfirmPswd = (e) => {
     setConfirmPswd(e.target.value);
   };
-  const createAcnt = () => {
+  const createAcnt = (e) => {
+    e.preventDefault();
     if (mail && createPswd && confirmPswd) {
       let newUser = {
         Mail: mail,
@@ -33,14 +35,16 @@ function SignUp() {
         ConfirmPswd: confirmPswd,
       };
       setUser([...user, newUser]);
+      alert("New User Registered");
+      setTimeout(() => {
+        navigate(`/payment?total=${totalValue}`);
+      }, 1000);
+    } else {
+      setMsg(true);
     }
     setCreatePswd("");
     setConfirmPswd("");
     setMail("");
-    alert("New User Registered");
-    setTimeout(() => {
-      navigate("/payment");
-    }, 2000);
   };
   useEffect(() => {
     console.log(user);
@@ -48,25 +52,40 @@ function SignUp() {
   return (
     <>
       <div>
-        <div className="signupCont">
-          <label htmlFor="mail">Enter Mail id</label>
-          <input type="mail" name="mail" value={mail} onChange={handleMail} />
-          <label htmlFor="createPswd">Enter Password</label>
-          <input
-            type="password"
-            value={createPswd}
-            onChange={handleCreatePswd}
-          />
-          <label htmlFor="confirmPswd">Confirm Password</label>
-          <input
-            type="password"
-            value={confirmPswd}
-            onChange={handleConfirmPswd}
-          />
-          <button className="btn" onClick={createAcnt}>
-            Sign Up
-          </button>
-        </div>
+        <form action="">
+          <div className="signupCont">
+            <label htmlFor="mail">Enter Mail id</label>
+            <input
+              type="mail"
+              name="mail"
+              value={mail}
+              onChange={handleMail}
+              required
+            />
+            <label htmlFor="createPswd">Enter Password</label>
+            <input
+              type="password"
+              value={createPswd}
+              onChange={handleCreatePswd}
+              required
+              minLength={6}
+              maxLength={10}
+            />
+            <label htmlFor="confirmPswd">Confirm Password</label>
+            <input
+              type="password"
+              value={confirmPswd}
+              onChange={handleConfirmPswd}
+              required
+              minLength={6}
+              maxLength={10}
+            />
+            {msg ? <h6>Fill all the values</h6> : null}
+            <button className="btn" onClick={createAcnt}>
+              Sign Up
+            </button>
+          </div>
+        </form>
       </div>
     </>
   );
