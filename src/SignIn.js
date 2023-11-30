@@ -7,7 +7,7 @@ function SignIn() {
   const [msg, setMsg] = useState(false);
   const [msg2, setMsg2] = useState(false);
 
-  const { name, setName, password, setPassword, user } =
+  const { name, setName, password, setPassword, user, setIsBuy, closeCart } =
     useContext(ListContext);
   const handleName = (e) => {
     setName(e.target.value);
@@ -30,6 +30,11 @@ function SignIn() {
       }
       if (userFound) {
         navigate("/order");
+        setIsBuy(true);
+        closeCart();
+        setTimeout(() => {
+          navigate("/");
+        }, 1000);
       } else {
         setMsg(true);
       }

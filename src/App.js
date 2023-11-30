@@ -32,7 +32,11 @@ function App() {
   const closeAll = () => {
     setIsClicked(true);
   };
-
+  const closeCart = () => {
+    setList([]);
+    setTotal(0);
+    closeAll();
+  };
   const AddList = (name, price) => {
     // const itemExist = list.some(
     //   (items) => items.Name === name && items.Price === price
@@ -93,6 +97,7 @@ function App() {
         setConfirmPswd,
         user,
         setUser,
+        closeCart,
       }}
     >
       <Router>

@@ -4,6 +4,7 @@ import { ListContext } from "./App";
 
 function SignUp({ totalValue }) {
   const [msg, setMsg] = useState(false);
+  const [msg2, setMsg2] = useState(false);
   const navigate = useNavigate();
   const {
     user,
@@ -29,16 +30,22 @@ function SignUp({ totalValue }) {
   const createAcnt = (e) => {
     e.preventDefault();
     if (mail && createPswd && confirmPswd) {
-      let newUser = {
-        Mail: mail,
-        CreatePswd: createPswd,
-        ConfirmPswd: confirmPswd,
-      };
-      setUser([...user, newUser]);
-      alert("New User Registered");
-      setTimeout(() => {
-        navigate(`/payment?total=${totalValue}`);
-      }, 1000);
+      if (createPswd !== confirmPswd) {
+        setMsg2(true);
+        return;
+      } else {
+        let newUser = {
+          Mail: mail,
+          CreatePswd: createPswd,
+          ConfirmPswd: confirmPswd,
+        };
+        setUser([...user, newUser]);
+        setMsg2(false);
+        alert("New User Registered");
+        setTimeout(() => {
+          navigate(`/signin`);
+        }, 1000);
+      }
     } else {
       setMsg(true);
     }
@@ -80,6 +87,7 @@ function SignUp({ totalValue }) {
               minLength={6}
               maxLength={10}
             />
+            {msg2 ? <h6>Password Not Matched</h6> : null}
             {msg ? <h6>Fill all the values</h6> : null}
             <button className="btn" onClick={createAcnt}>
               Sign Up

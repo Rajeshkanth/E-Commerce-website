@@ -4,14 +4,16 @@ import { ListContext } from "../App";
 import { PiShoppingCartLight } from "react-icons/pi";
 
 function Cart() {
-  const { list, setList, setTotal, total, RemoveList, closeAll, buy } =
-    useContext(ListContext);
-
-  const closeCart = () => {
-    setList([]);
-    setTotal(0);
-    closeAll();
-  };
+  const {
+    list,
+    setList,
+    setTotal,
+    total,
+    RemoveList,
+    closeAll,
+    buy,
+    closeCart,
+  } = useContext(ListContext);
 
   useEffect(() => {}, [list, total]);
 
